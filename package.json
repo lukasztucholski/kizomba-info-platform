@@ -1,14 +1,64 @@
 {
   "name": "kizomba-info-platform",
-  "version": "0.0.1",
   "description": "Kizomba and Urban Kiz Info Platform",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "kizomba"
-  ],
   "author": "Łukasz Tucholski",
-  "license": "MIT"
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack --mode production --config webpack.config.js",
+    "dev": "webpack-dev-server --mode development"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,scss,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "regenerator-runtime": "^0.13.5",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuetify": "^2.2.18",
+    "vuex": "^3.1.3",
+    "vuex-persistedstate": "^2.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "deepmerge": "^4.2.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "fibers": "^4.0.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.4.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
 }

@@ -3,9 +3,6 @@ import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
 import colors from 'vuetify/lib/util/colors';
 
-import store from '../../store';
-console.log(store);
-
 Vue.use(Vuetify);
 
 export default new Vuetify({
@@ -14,18 +11,25 @@ export default new Vuetify({
   },
   theme: {
     dark: true,
+
     themes: {
-      dark: {
-        primary: colors.blue.darken2,
-        secondary: colors.grey.darken1,
-        accent: colors.shades.black,
-        error: colors.red.accent3,
-      },
       light: {
-        primary: colors.green.darken4,
-        secondary: colors.blue.lighten2,
-        accent: colors.yellow.darken5,
-        error: colors.red.darken2,
+        primary: '#00baff',
+        secondary: colors.indigo.base,
+        accent: colors.deepOrange.base,
+        error: colors.red.base,
+        warning: colors.brown.base,
+        info: colors.orange.base,
+        success: colors.green.base,
+      },
+      dark: {
+        primary: '#1EB980',
+        secondary: '#045D56',
+        accent: '#FF6859',
+        error: colors.red.accent3,
+        info: '#FFCF44',
+        success: '#72DEFF',
+        warning: '#B15DFF',
       },
     },
   },

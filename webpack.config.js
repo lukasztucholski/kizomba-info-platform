@@ -41,6 +41,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
+              prependData: "@import '~/assets/styles/variables.scss'",
               implementation: require('sass'),
               sassOptions: {
                 fiber: require('fibers'),
@@ -58,6 +59,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
+              prependData: "@import '~/assets/styles/variables.scss';",
               implementation: require('sass'),
               sassOptions: {
                 fiber: require('fibers'),

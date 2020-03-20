@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Eczar|Roboto&display=swap');
+
+body {
+  * {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+}
+// font-family: 'Eczar', serif;
+// font-family: 'Roboto', sans-serif;
+
+$font-size: 10 11 12 13 14 15 16 18 21 24 30 36 48 62 80 150;
+@each $size in $font-size {
+  .font-size {
+    &--#{$size} {
+      font-size: #{$size}px !important;
+    }
+  }
+}
+
+.templogo {
+  height: 90px;
+  width: 100%;
+  margin: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+}

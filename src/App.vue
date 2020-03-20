@@ -1,14 +1,7 @@
 <template>
   <v-app>
-    <v-container>
-      <v-row justify="end">
-        <v-switch
-          v-model="$vuetify.theme.dark"
-          class="mr-3"
-          append-icon="fa-moon"
-        />
-      </v-row>
-    </v-container>
+    <AppToolbar @setDrawerVisibility="drawer = !drawer" />
+    <AppDrawer :isVisible="drawer" @setDrawerVisiblity="drawer = $event" />
 
     <v-content>
       <div class="app">
@@ -19,7 +12,16 @@
 </template>
 
 <script>
+import AppToolbar from '~/components/app/AppToolbar';
+import AppDrawer from '~/components/app/AppDrawer';
+
 export default {
   name: 'App',
+
+  components: { AppToolbar, AppDrawer },
+
+  data: () => ({
+    drawer: null,
+  }),
 };
 </script>

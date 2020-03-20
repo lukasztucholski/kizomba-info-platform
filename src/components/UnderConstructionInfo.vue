@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col sm="10" md="8" lg="6">
+      <v-col sm="10" md="8">
         <v-card loading elevation="5">
           <v-card-title>UNDER CONSTRUCTION</v-card-title>
           <v-card-text>
@@ -21,6 +21,14 @@
             </p>
             <p>Stack technologiczny: Vue.js + Vuetify, Firebase</p>
             <p>Projekt w pełni open source i non-profit!</p>
+            <p>
+              Repozytorium:
+              <a
+                href="https://github.com/lukasztucholski/kizomba-info-platform"
+              >
+                GitHub
+              </a>
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
